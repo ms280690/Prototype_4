@@ -8,10 +8,10 @@ ADD /src/ /src/
 VOLUME /src/
 
 # Update package list
-RUN ["apt-get", "update"]
+# RUN ["apt-get", "update"]
 
 # Install vim
-RUN ["apt-get", "install", "-y", "vim"]
+# RUN ["apt-get", "install", "-y", "vim"]
 
 # Update cabal package list
 RUN cabal update
@@ -20,9 +20,9 @@ RUN cabal update
 RUN cabal install syb-0.6 unification-fd-0.10.0.1 list-extras-0.4.1.4
 
 # Compile the required files, so if there is n error you get it when building the container
-RUN ["ghc", "IOSketch.hs"]
+# RUN ["ghc", "IOSketch.hs"]
 
-RUN ["ghc", "IOSketchM.hs"]
+# RUN ["ghc", "IOSketchM.hs"]
 
-# Run GHCI 
-RUN ["ghci"]
+# Run GHCI
+# RUN ["ghci"]
