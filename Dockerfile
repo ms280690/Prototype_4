@@ -5,7 +5,7 @@ FROM haskell:latest
 ADD /src/ /src/
 
 # cd into the /src/
-WORKDIR /src/
+VOLUME /src/
 
 # Update package list
 RUN ["apt-get", "update"]
