@@ -2,7 +2,7 @@ build:
 	docker build -t prototype_4 --no-cache=true .
 
 rundev:
-	docker run -d -t --name prototype_4 prototype_4
+	docker run -d -t -v $(CURDIR):/Prototype_4 --name prototype_4 prototype_4
 
 
 killdev:
